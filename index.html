@@ -1,1 +1,48 @@
-<h1>Hello!</h1>
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <title>Data Visualization Narrative</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="initial-scene.js"></script>
+  <script src="us-states.js"></script>
+</head>
+
+<body onload="loadData()">
+  <div class="container">
+    <div class="content">
+      <div class="main-title">Police Fatal Encounters</div>
+      <div class="source">
+        <p>Source: 
+          <a class="link" href="https://github.com/washingtonpost/data-police-shootings">
+            https://github.com/washingtonpost/data-police-shootings
+          </a>
+        </p>
+      </div>
+      <div class="narrative-text">
+        <p>
+          Every year many people are killed when they have encounters with police officers. In 2015,
+          The Washington Post began tracking more than a dozen details about each killing such as name, date,
+          age, race, state, etc.
+        </p>
+        <p>
+          The bar chart below shows the number of fatalities per year since 2015. If we hover over each bar,
+          we can see which states had more killings that year (California, Texas and Florida appear in 
+          the top 3 positions every year).
+        </p>
+      </div>
+      <svg width=500 height=500></svg>
+      <div class="navigation">
+        <a href="mid-scene.html" class="link_button">Next</a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div id="tooltip" class="tooltip"></div>
+</body>
+</html>

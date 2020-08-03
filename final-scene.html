@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <title>Data Visualization Narrative</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="final-scene.js"></script>
+</head>
+
+<body onload="loadData()">
+  <div class="container">
+    <div class="content">
+      <div class="main-title">Police Fatal Encounters</div>
+      <div class="source">
+        <p>Source: 
+          <a class="link" href="https://github.com/washingtonpost/data-police-shootings">
+            https://github.com/washingtonpost/data-police-shootings
+          </a>
+        </p>
+      </div>
+      <div class="narrative-text">
+        <p>
+          A breakdown by race can be found in the donut chart below, additional information on how deaths
+          are clustered by age groups is shown when the mouse is hovered over a segment.
+        </p>
+      </div>
+      <svg width=500 height=500></svg>
+      <div class="narrative-text">
+        <p>
+          After exploring the data from different views (by state, race and age group), we can draw a conclusion that 
+          the following groups living in states in the south of the U.S. have a higher chance of being killed by
+          police officers:
+        </p>
+        <ul>
+            <li>White people aged 16 to 60.</li>
+            <li>Black, Hispanic and Native americans people aged 16 to 45.</li>
+            <li>Asian people aged 31 to 45.</li>
+        </ul>
+      </div>
+      <div class="navigation">
+        <a href="mid-scene.html" class="link_button">Previous</a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div id="tooltip" class="tooltip"></div>
+</body>
+</html>

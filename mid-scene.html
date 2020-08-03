@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <title>Data Visualization Narrative</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script src="mid-scene.js"></script>
+  <script src="us-states.js"></script>
+</head>
+
+<body onload="loadData()">
+  <div class="container">
+    <div class="content">
+      <div class="main-title">Police Fatal Encounters</div>
+      <div class="source">
+        <p>Source: 
+          <a class="link" href="https://github.com/washingtonpost/data-police-shootings">
+            https://github.com/washingtonpost/data-police-shootings
+          </a>
+        </p>
+      </div>
+      <div class="narrative-text">
+        <p>
+          The states in the map are colored according to the number of deaths reported over the last 5 years. From
+          this view of the data a pattern can be observed showing that states in the south of the U.S. have more 
+          people killed by police officers than states in the north.
+        </p>
+        <p>
+          The total count of fatalities and a breakdown by race are displayed when the pointer is positioned
+           over each state.
+        </p>
+      </div>
+      <svg width=500 height=500></svg>
+      <div class="navigation">
+        <a href="index.html" class="link_button">Previous</a>
+        <div class="filler"></div>
+        <a href="final-scene.html" class="link_button">Next</a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div id="tooltip" class="tooltip"></div>
+</body>
+</html>
